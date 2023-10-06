@@ -2,17 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-logo',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <p>
-      button works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: ` <div class=" text-8xl text-center">LOGO</div> `,
+  styles: [],
 })
-export class ButtonComponent {
-
-}
+export class LogoComponent {}
