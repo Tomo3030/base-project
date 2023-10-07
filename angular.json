@@ -63,7 +63,10 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+          
+              ]
             }
           },
           "defaultConfiguration": "production"

@@ -10,9 +10,21 @@ export const routes: Routes = [
   },
   {
     path: 'classroom/:id',
-    loadComponent: () =>
-      import('./landing/pages/enter-name-page.component').then(
-        (m) => m.EnterNamePageComponent
-      ),
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./landing/pages/enter-name-page.component').then(
+            (m) => m.EnterNamePageComponent
+          ),
+      },
+      {
+        path: 'join',
+        loadComponent: () =>
+          import('./landing/pages/join-team.component').then(
+            (m) => m.JoinTeamComponent
+          ),
+      },
+    ],
   },
 ];
