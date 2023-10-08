@@ -31,8 +31,6 @@ import { ActivatedRoute, Router } from '@angular/router';
             Sign In
           </button>
         </div>
-
-        <button>cji</button>
       </app-card>
 
       <ng-template #signedIn>
