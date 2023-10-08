@@ -88,17 +88,17 @@ export class ClassroomIdPageComponent {
       return;
     }
     this.spinner.show();
-
-    // this.landingService
-    //   .checkIfClassroomExists(this.classroomId)
-    //   .then((exists) => {
-    //     if (exists) {
-    //     console.log('exists');
-    //       this.router.navigate(['classroom', this.classroomId]);
-    //     } else {
-    //       this.pinNotValid();
-    //     }
-    //   });
+    this.landingService
+      .checkIfClassroomExists(this.classroomId)
+      .then((exists) => {
+        if (exists) {
+          console.log('exists');
+          this.router.navigate(['classroom', this.classroomId]);
+        } else {
+          this.pinNotValid();
+        }
+        this.spinner.hide();
+      });
   }
 
   private pinNotValid() {

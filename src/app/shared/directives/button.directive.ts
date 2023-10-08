@@ -11,7 +11,7 @@ import { RippleDirective } from './ripple.directive';
   selector: '[appButton]',
   standalone: true,
 })
-export class ButtonDirective implements AfterViewInit {
+export class ButtonDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {
     const classes = [
       'w-full',
@@ -27,13 +27,11 @@ export class ButtonDirective implements AfterViewInit {
       'tracking-wide',
       'text-white',
       'bg-primary',
+      'shadow-md',
       'active:shadow-inner',
       'disabled:bg-[#DADADA]',
       'disabled:text-[#A8A8A8]',
     ];
     classes.forEach((c) => this.renderer.addClass(this.el.nativeElement, c));
-  }
-  ngAfterViewInit(): void {
-    this.renderer.setAttribute(this.el.nativeElement, 'ripple', '');
   }
 }
